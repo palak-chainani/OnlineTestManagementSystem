@@ -1,0 +1,143 @@
+/* Split layout wrapper */
+.login-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #fdf6f0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Left side image */
+.login-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdf6f0;
+}
+
+.login-left img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Right side form */
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdf6f0;
+}
+
+/* Form card */
+.form-box {
+  width: 80%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 35px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(139, 107, 175, 0.15);
+}
+
+/* Title */
+.form-box h2 {
+  text-align: center;
+  color: #693E94;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+/* Form fields */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #693E94;
+}
+
+.form-field input {
+  padding: 10px 12px;
+  border: 1px solid #CDB9E1;
+  border-radius: 8px;
+  background-color: #fffaf7;
+  transition: border-color 0.3s ease;
+  font-size: 15px;
+  color: #333;
+}
+
+.form-field input:focus {
+  border-color: #8B6BAF;
+  outline: none;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background: linear-gradient(to right, #8B6BAF, #A785C1);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(to right, #A785C1, #8B6BAF);
+  box-shadow: 0 6px 14px rgba(139, 107, 175, 0.3);
+}
+
+button:disabled {
+  background: #E0D1EF;
+  cursor: not-allowed;
+}
+
+/* Register buttons (2nd and 3rd) */
+button:nth-child(2),
+button:nth-child(3) {
+  background: linear-gradient(to right, #CBAAE3, #E5D0F1);
+  color: #693E94;
+}
+
+button:nth-child(2):hover,
+button:nth-child(3):hover {
+  background: linear-gradient(to right, #E5D0F1, #CBAAE3);
+  color: #693E94;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-box {
+    width: 100%;
+    max-width: 100%;
+    padding: 25px;
+  }
+}

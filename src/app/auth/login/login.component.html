@@ -1,1 +1,28 @@
-<p>login works!</p>
+<div class="login-wrapper">
+    
+  <div class="login-left">
+  <img src="assets/images/undraw_online-test_20lm.svg" alt="Online Test Illustration" />
+</div>
+
+  <div class="login-right">
+    <form [formGroup]="loginFormGroup" (ngSubmit)="submitData()" class="form-box">
+      <h2>Login to Test Portal</h2>
+
+      <div class="form-field">
+        <label for="username">Enter Name:</label>
+        <input formControlName="username" type="text" id="username" placeholder="Enter username..." />
+      </div>
+
+      <div class="form-field">
+        <label for="password">Enter Password:</label>
+        <input formControlName="password" type="password" id="password" placeholder="Enter password..." />
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" [disabled]="loginFormGroup.invalid">LOGIN</button>
+        <button type="button" (click)="registerAsTeacher()">Register as Teacher</button>
+        <button type="button" (click)="registerAsStudent()">Register as Student</button>
+      </div>
+    </form>
+  </div>
+</div>
